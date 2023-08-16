@@ -1,0 +1,301 @@
+@font-face {
+  font-family:'Outfit', sans-serif ;
+  src: url('../fonts/Outfit-VariableFont_wght.ttf');
+}
+
+:root{
+    --primary-color :#0856CF;
+    --secondary-color :#4B92FF;
+    --black : #000;
+    --white : #fff;
+    --grey :lightgrey;
+    --box-shadow : rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    --hover-fw : 500;
+    --active-fw : 500;
+    --body-bg:#F4F4F4;
+    --lightgray:#ebebeb;
+     
+}
+
+.primary-text-color{
+  color :var(--primary-color) !important;
+}
+.primary-text-color:hover{
+ color :var(--secondary-color);
+}
+.before-after-line-span{
+  background: var(--white);
+  z-index: 999;
+  padding: 0 10px;
+  position: sticky;
+}
+.before-after-line{
+  position: relative !important;
+}
+
+.before-after-line::before{
+  content: '';
+  position: absolute !important;
+  top: 50% !important;
+  left: 0 !important;
+  height: 1px !important; 
+  width: 100% !important;
+  background-color: var(--grey) !important;
+  
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Outfit', sans-serif;
+    background: var(--body-bg);
+    
+}
+/* .margin-top{
+    margin-top: 30px;
+} */
+a{
+    text-decoration: none !important;
+    color: unset;
+}
+p,h5,h6{
+  padding: 0;
+  margin: 0;
+}
+a:hover{
+    
+    color: unset;
+}
+/* navbar */
+.active{
+    font-weight: var(--active-fw);
+}
+.logo{
+    width: 160px;
+}
+
+.navbar-toggler:focus{
+    box-shadow: none !important;
+}
+.navbar{
+    box-shadow: var(--box-shadow);
+}
+
+.nav-link{
+    color: var(--primary-color) !important;
+
+}
+.nav-link:hover{
+    font-weight: var(--hover-fw) !important;   
+}
+.dropdown-menu{
+    border: 2px solid var(--secondary-color);
+}
+.dropdown-item{
+    cursor: pointer !important;
+}
+.dropdown-item:hover{
+    background: #d5e6fffd !important;
+    
+}
+.modal-backdrop.fade.show{
+    display: none !important;
+}
+.sticky {
+  z-index: 999;
+  position: fixed;
+  top: 0%;
+  background: var(--white);
+  transition: 0.2s ease-in-out;
+  width: 100%;
+  /* height: 100px; */
+  box-shadow: var(--box-shadow) ;
+}
+
+#myHeader {
+  transition: 0.3s ease-in-out;
+}
+/* navbar-end */
+
+/* banner */
+.banner-section{
+    background-image: url('../images/c&b_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.mt-15{
+    margin: 13em 0;
+}
+/* form */
+.flightsearchform-wrapper{
+    box-shadow: var(--box-shadow);
+}
+.flightsearch-radio input{
+    cursor: pointer;
+}
+br{
+    display: none;
+}
+.datepicker.datepicker-dropdown.dropdown-menu.datepicker-orient-left.datepicker-orient-top, .day, .datepicker-days,.prev, .datepicker-switch, .next,.dow{
+padding: 10px !important;
+}
+/* autocomplete */
+.ui-menu-item {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+  }
+  
+  .ui-menu-item img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }
+  .flag-emoji {
+    font-size: 24px; /* Increase the font size to adjust height and width */
+    text-align: end; /* Add spacing between the text and emoji */
+  }
+  #from_autocomplete-suggestions,#to_autocomplete-suggestions{
+    max-height: 200px;
+    position: absolute;
+    overflow-y: auto;
+    scrollbar-width: none;
+    background-color: #fff;
+    width: 400px;
+    z-index: 999;
+  }
+
+  #from_autocomplete-suggestions li,#to_autocomplete-suggestions li {
+   list-style-type: none;
+   padding: 10px;
+   border-bottom: 1px solid var(--grey);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   cursor: pointer;
+  }
+  .country-flag,.departure-icon{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  .form-switch .form-check-input::after{
+    transition: 0.3s all !important; 
+    border: 2px solid var(--secondary-color);
+  }
+  .form-check-input[type="checkbox"]:checked{
+    background-color: var(--primary-color) !important;
+  }
+  .form-switch .form-check-input:checked[type="checkbox"]::after{
+    background-color: var(--white);
+    border: 2px solid var(--primary-color);
+    transition: 0.3s all;
+  }
+
+  .btn-common{
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: 2px solid var(--primary-color);
+  }
+
+  .btn-common:hover{
+    border:2px solid var(--primary-color) ;
+    color: var(--primary-color);
+  }
+  .from-error,.to-error,.depdate-error,.returndate-error,.signinyourPassword-error,.signinyourEmail-error,.yourPassword-error,.yourEmail-error,.yourName-error{
+    color:red;
+    font-size: 12px;
+  }
+  .form-select:focus{
+    box-shadow: none !important;
+  }
+  .bg-primary{
+    background: var(--primary-color) !important;
+  }
+/* form-end */
+
+/* banner end */
+
+/* preloader */
+
+#preloader {
+  background: #F4F4F4;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-repeat: no-repeat;
+  z-index: 999999999;
+  background-image: url("../images/c&b_airplane-loader.gif");
+  background-size: 50%;
+  background-position: center;
+}
+.mt-7{
+  margin-top: 5rem;
+}
+.preload-finish {
+  opacity: 0;
+  pointer-events: none;
+
+  transition: 1s ease-in-out;
+}
+
+@media only screen and (max-width: 768px) {
+  #preloader {
+    background-size: 100%;
+  }
+}
+/* preloader end */
+/* modal */
+.modal {
+  background: rgba(0,0,0,0.6);
+}
+.modal-header{
+  background: var(--primary-color);
+  color: var(--white);
+}
+.modal .btn-close{
+background-color: var(--white) !important;
+--bs-btn-close-color:var(--white) !important;
+}
+.btn-close{
+  background-color: var(--white) !important;
+  --bs-btn-close-color:var(--white);
+  }
+/* modal */
+
+/* result */
+.result-box,.filter-container{
+  box-shadow: var(--box-shadow);
+}
+.result-box-img img{
+  width: 40px;
+ 
+}
+.border-left-dot{
+  position: relative;
+  border-right: 1px dashed var(--grey);
+}
+
+.flight-details-right img{
+  width: 25px;
+}
+.round-trip-heading{
+  background-color: var(--lightgray);
+}
+.reset-btn{
+  cursor: pointer;
+}
+.result-append{
+  max-height: 900px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) !important;
+}
+/* result end */
