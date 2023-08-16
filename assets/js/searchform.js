@@ -415,7 +415,7 @@ $(document).ready(() => {
 
       //oneway
       if ($('input[name="tourtype"]').val() == "oneway") {
-        url = `http://127.0.0.1:5500/result.html?FromCity1=${encodeURIComponent(
+        url = `https://sathya-1904.github.io/c-b.com/result.html?FromCity1=${encodeURIComponent(
           hidden_from
         )}&ToCity1=${encodeURIComponent(
           hidden_to
@@ -440,7 +440,7 @@ $(document).ready(() => {
       }
       //round-trip
       else if ($('input[name="tourtype"]').val() == "round-trip") {
-        url = `http://127.0.0.1:5500/result.html?FromCity1=${encodeURIComponent(
+        url = `https://sathya-1904.github.io/c-b.com/result.html?FromCity1=${encodeURIComponent(
           hidden_from
         )}&ToCity1=${encodeURIComponent(
           hidden_to
